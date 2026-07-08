@@ -167,6 +167,7 @@ nog_status: spike
 
 ---
 
+<!-- nog:blk-011 -->
 ## 7. Changelog
 
 - v1 (July 2026): Initial compilation from design discussion — problem framing, use cases, tool survey summary, architecture decisions (identity model, front matter + block IDs, comment data model, fork-per-round + AI merge, ruleset governance, scope control, permissions), open questions, naming decision (Nog).

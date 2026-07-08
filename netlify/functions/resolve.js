@@ -199,13 +199,17 @@ async function createCommit(parentSha, treeSha, message) {
 }
 
 function replaceBlock(raw, blockId, candidateEdit) {
-  const markerLine = `<!-- nog:${blockId} -->`;
-  const start = raw.indexOf(markerLine);
-  if (start === -1) return null;
-  const contentStart = start + markerLine.length;
+  if (!/^blk-[\w-]+$/.test(blockId)) return null;
 
-  const nextMarker = raw.indexOf("<!-- nog:blk-", contentStart);
-  const contentEnd = nextMarker === -1 ? raw.length : nextMarker;
+  const markerPattern = new RegExp(`^<!-- nog:${blockId} -->[ \\t]*$`, "m");
+  const match = markerPattern.exec(raw);
+  if (!match) return null;
+  const contentStart = match.index + match[0].length;
+
+  const nextMarkerPattern = /^<!-- nog:blk-[\w-]+ -->[ \t]*$/m;
+  const rest = raw.slice(contentStart);
+  const nextMatch = nextMarkerPattern.exec(rest);
+  const contentEnd = nextMatch ? contentStart + nextMatch.index : raw.length;
 
   const before = raw.slice(0, contentStart);
   const after = raw.slice(contentEnd);
