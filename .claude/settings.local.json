@@ -39,7 +39,15 @@
       "Bash(curl -s \"https://nogthinslice.netlify.app/.netlify/functions/ping\" -w \"\\\\nSTATUS:%{http_code}\\\\n\")",
       "Bash(curl -s \"https://nogthinslice.netlify.app/.netlify/functions/resolve\" -w \"\\\\nSTATUS:%{http_code}\\\\n\")",
       "Bash(npm view *)",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "Bash(curl -s \"https://nogthinslice.netlify.app/.netlify/functions/resolve?submission_id=6a4eb03b767c843053572933\" -w \"\\\\nSTATUS:%{http_code}\\\\n\")",
+      "Bash(curl -s -X POST https://nogthinslice.netlify.app/.netlify/functions/resolve -H 'Content-Type: application/x-www-form-urlencoded' --data-urlencode submission_id=6a4eb03b767c843053572933 --data-urlencode resolved_by=Dil -w '\\\\nSTATUS:%{http_code}\\\\n')",
+      "Bash(curl -s https://nogthinslice.netlify.app/ -H 'Content-Type: application/x-www-form-urlencoded' --data-urlencode form-name=nog-comment --data-urlencode doc_id=doc-0f2cf202-3760-456a-b0d7-d511ccd883f2 --data-urlencode block_id=blk-010 --data-urlencode 'comment_text=The naming section is a bit long for a design note - could it be trimmed to just the chosen name and one line of rationale?' --data-urlencode 'candidate_edit=Working name: **Nog** \\(\"Notes On Git\"\\) — short, easy to say, and a direct acronym-to-function mapping with no meaningful naming collisions found.' --data-urlencode 'commenter_name=Pilot Tester' -o /dev/null -w 'submit status: %{http_code}\\\\n')",
+      "Read(//tmp/**)",
+      "Bash(sed -n '/nog:blk-009/,/nog:blk-010/p' /tmp/fork_check.md)",
+      "Bash(sed -n '/nog:blk-010/,/nog:blk-011/p' /tmp/fork_check.md)",
+      "Bash(rm /tmp/fork_check.md)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"https://nogthinslice.netlify.app/\")"
     ]
   }
 }
