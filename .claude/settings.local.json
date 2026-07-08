@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la \"/Users/dilgreen/CoWork/Nog/\")",
+      "Bash(find \"/Users/dilgreen/CoWork\" -type f -mmin -60 -not -path \"*/Code/.claude/*\" 2>/dev/null)",
+      "Bash(gh auth *)",
+      "Bash(gh api *)",
+      "Bash(netlify --version)",
+      "Bash(hugo version *)",
+      "Bash(uuidgen)",
+      "Bash(hugo new *)",
+      "Bash(hugo --minify=false)",
+      "Bash(gh repo *)",
+      "Bash(git init *)",
+      "Bash(git add *)"
+    ]
+  }
+}

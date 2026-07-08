@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ .Title }}</title>
+  <link rel="stylesheet" href="{{ "css/nog.css" | relURL }}">
+</head>
+<body data-doc-id="{{ .Params.nog_id }}" data-form-name="{{ .Site.Params.nogFormName }}">
+  <main class="nog-doc">
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  {{ block "form" . }}
+  <form name="{{ .Site.Params.nogFormName }}" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="text" name="doc_id">
+    <input type="text" name="block_id">
+    <textarea name="comment_text"></textarea>
+    <textarea name="candidate_edit"></textarea>
+    <input type="text" name="commenter_name">
+    <input type="text" name="bot-field">
+  </form>
+  {{ end }}
+
+  <script src="{{ "js/nog.js" | relURL }}"></script>
+</body>
+</html>

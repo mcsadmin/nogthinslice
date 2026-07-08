@@ -1,0 +1,11 @@
+baseURL = '/'
+languageCode = 'en-us'
+title = 'Nog Pilot'
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[params]
+  nogGithubOwner = 'mcsadmin'
+  nogGithubRepo = 'nog-pilot'
+  nogFormName = 'nog-comment'
