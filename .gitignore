@@ -3,3 +3,6 @@ resources/
 .hugo_build.lock
 node_modules/
 .netlify/
+
+# Local Netlify folder
+.netlify
