@@ -47,7 +47,15 @@
       "Bash(sed -n '/nog:blk-009/,/nog:blk-010/p' /tmp/fork_check.md)",
       "Bash(sed -n '/nog:blk-010/,/nog:blk-011/p' /tmp/fork_check.md)",
       "Bash(rm /tmp/fork_check.md)",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"https://nogthinslice.netlify.app/\")"
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"https://nogthinslice.netlify.app/\")",
+      "Bash(unzip -l \"/Users/dilgreen/CoWork/Nog/Noggin the Nog Git Comments.zip\")",
+      "Bash(mkdir -p brand-assets)",
+      "Bash(unzip -o \"Noggin the Nog Git Comments.zip\" -d brand-assets)",
+      "Bash(mkdir -p static/brand)",
+      "Bash(cp \"/Users/dilgreen/CoWork/Nog/brand-assets/brand/favicon.ico\" static/favicon.ico)",
+      "Bash(cp \"/Users/dilgreen/CoWork/Nog/brand-assets/brand/nog-favicon.svg\" static/nog-favicon.svg)",
+      "Bash(cp \"/Users/dilgreen/CoWork/Nog/brand-assets/brand/png/apple-touch-icon.png\" static/apple-touch-icon.png)",
+      "Bash(cp \"/Users/dilgreen/CoWork/Nog/brand-assets/brand/png/maskable-192.png\" static/maskable-192.png)"
     ]
   }
 }

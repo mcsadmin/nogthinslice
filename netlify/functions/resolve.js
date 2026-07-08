@@ -255,18 +255,20 @@ function page(title, body) {
   return `<!DOCTYPE html>
 <html><head><meta charset="utf-8"><title>${escapeHtml(title)}</title>
 <style>
-body{font-family:-apple-system,sans-serif;max-width:38rem;margin:3rem auto;padding:0 1.5rem;line-height:1.6;color:#1c1f24;}
+body{font-family:-apple-system,sans-serif;max-width:38rem;margin:0 auto;padding:0 1.5rem 3rem;line-height:1.6;color:#1c1712;}
+header{display:flex;align-items:center;gap:0.6rem;padding:2rem 0 1.5rem;border-bottom:1px solid #d8dde3;margin-bottom:2rem;}
+header img{height:2rem;}
 blockquote{border-left:3px solid #d8dde3;margin:0 0 1rem;padding-left:0.8rem;color:#333;}
-.candidate{border-left-color:#2a5db0;background:#eef3fb;padding:0.6rem 0.8rem;}
+.candidate{border-left-color:#a5372a;background:#f7e9e5;padding:0.6rem 0.8rem;}
 .meta{display:grid;grid-template-columns:auto 1fr;gap:0.2rem 1rem;font-size:0.9rem;color:#555;margin-bottom:1.5rem;}
 .meta dt{font-weight:600;}
 .warn{background:#fff4e5;border:1px solid #f0c36d;padding:0.6rem 0.8rem;border-radius:6px;}
 form{margin-top:1.5rem;}
 label{display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.3rem;}
 input[type=text]{width:100%;padding:0.5rem;border:1px solid #d8dde3;border-radius:6px;margin-bottom:1rem;font:inherit;}
-button{background:#2a5db0;color:#fff;border:none;border-radius:6px;padding:0.6rem 1.2rem;font-size:0.95rem;cursor:pointer;}
+button{background:#a5372a;color:#fff;border:none;border-radius:6px;padding:0.6rem 1.2rem;font-size:0.95rem;cursor:pointer;}
 </style></head>
-<body><h1>${escapeHtml(title)}</h1>${body}</body></html>`;
+<body><header><img src="/brand/nog-icon.svg" alt=""><strong>Nog</strong></header><h1>${escapeHtml(title)}</h1>${body}</body></html>`;
 }
 
 function respond(statusCode, bodyOrHtml) {

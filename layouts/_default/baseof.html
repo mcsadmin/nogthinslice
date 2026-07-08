@@ -4,9 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ .Title }}</title>
+  <meta name="theme-color" content="#1c1712">
+  <link rel="icon" href="{{ "favicon.ico" | absURL }}" sizes="any">
+  <link rel="icon" href="{{ "nog-favicon.svg" | absURL }}" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | absURL }}">
+  <link rel="manifest" href="{{ "manifest.webmanifest" | absURL }}">
   <link rel="stylesheet" href="{{ "css/nog.css" | relURL }}">
 </head>
 <body data-doc-id="{{ .Params.nog_id }}" data-form-name="{{ .Site.Params.nogFormName }}">
+  <header class="nog-header">
+    <a href="{{ "/" | relURL }}">
+      <img src="{{ "brand/nog-lockup.svg" | absURL }}" alt="Nog — markdown comments, versioned in git" class="nog-lockup">
+    </a>
+  </header>
   <main class="nog-doc">
     {{ block "main" . }}{{ end }}
   </main>
