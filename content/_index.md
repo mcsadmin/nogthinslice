@@ -155,17 +155,8 @@ nog_status: spike
 ---
 
 <!-- nog:blk-010 -->
-## 6. Naming
 
-- Working name: **Nog** — "Notes On Git."
-- Rationale: short, easy to say, playful register consistent with the original naming instinct, clean of any meaningful collision, direct acronym-to-function mapping.
-- Rejected candidates, with reasons:
-  - **Cog** ("Comments On Git") — collides with Cocogitto's `cog` CLI, a Conventional Commits/semver toolbox that operates directly on git repos (same domain, same likely audience). Also collides with at least three other unrelated existing tools using the same name (a Python code-generation tool, Replicate's ML container tool, Grafana's code-gen tool).
-  - **Gloss** — thematically the strongest fit (a "gloss" is the historical term for marginal commentary on a text), but sits too close to Charm's *Glow* and *Lip Gloss* — markdown/git-terminal tools from the same maker, same audience, similar phonetics.
-  - **Dog** — collides with an existing tool described as "a synchronisation tool that gathers changes in a central git repository" — too close to Nog's own domain.
-  - **Ink** — collides with Ink & Switch, a local-first software research group whose work is directly adjacent to this exact problem space.
-
----
+Working name: **Nog** ("Notes On Git") — short, easy to say, and a direct acronym-to-function mapping with no meaningful naming collisions found.
 
 <!-- nog:blk-011 -->
 ## 7. Changelog
