@@ -5,6 +5,9 @@ title = 'Nog Pilot'
 [markup.goldmark.renderer]
   unsafe = true
 
+[minify.tdewolff.html]
+  keepComments = true
+
 [params]
   nogGithubOwner = 'mcsadmin'
   nogGithubRepo = 'nog-pilot'
